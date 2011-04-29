@@ -6,11 +6,13 @@
 #     13 40 20 10 5 16 8 4 2 1
 
 # Qual inteiro positivo abaixo de 1 milhão (999.999) produz a sequência com mais itens
+                       
+#>> load 'calculador_sequencia.rb'
+#=> true
+#>> CalculadorSequencia.new 999_999
+#=> Maior número: 837799 com 525 itens
 
-#>> Analisador.new 999_999
-#>> Maior número: 837799 com 525 itens
-
-#>> 84s - Maior número: 837799 com 525 itens
+#=> 84s - Maior número: 837799 com 525 itens
 
 class CalculadorSequencia
   
