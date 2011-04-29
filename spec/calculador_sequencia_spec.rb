@@ -1,3 +1,5 @@
+# encoding: utf-8
+$LOAD_PATH.unshift "."
 require 'lib/calculador_sequencia'
 
 describe CalculadorSequencia do
