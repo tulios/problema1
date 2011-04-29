@@ -15,7 +15,7 @@ Qual inteiro positivo abaixo de 1 milhão, produz a sequencia com mais items?
 
 = Executando
 
-  bin/calculador_sequencia
+  bin/calculador_sequencia 999999
   
 = Considerações
 
