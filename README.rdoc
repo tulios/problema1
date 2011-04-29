@@ -25,4 +25,4 @@ Qual inteiro positivo abaixo de 1 milhão, produz a sequencia com mais items?
 
 O Ruby 1.9.2 é consideravelmente mais rápido que o 1.8.7, compare.
   
-  time bin/calculador_sequencia
+  time bin/calculador_sequencia 999999
