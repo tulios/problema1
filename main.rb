@@ -10,39 +10,30 @@
 #>> Analisador.new 999_999
 #>> Maior número: 837799 com 525 itens
 
-class Seq
-  
-  def initialize n
-    @n = n
-    @n_original = @n
-    @qtd_itens = 0
-    self
-  end
-  
-  def calc n = @n
-    @qtd_itens += 1
-    return @qtd_itens if n == 1
-    return calc(n/2) if n.even?
-    calc(3*n+1)
-  end
-  
-end
+#>> 84s - Maior número: 837799 com 525 itens
 
-class Analisador
+class CalculadorSequencia
   
   def initialize limite
-    @limite = limite
-    @maior_numero_itens = -1
+    maior_numero_itens = -1
+    maior_numero = 0
     
-    1.step(@limite, 2).each do |numero|
-      resultado = Seq.new(numero).calc
-      if resultado > @maior_numero_itens
-        @maior_numero_itens = resultado 
-        @maior_numero = numero
-      end
+    t1 = Time.now.to_i
+    1.step(limite, 2).each do |numero|
+      resultado = calc(numero)
+      maior_numero_itens, maior_numero = resultado, numero if resultado > maior_numero_itens
     end
     
-    puts "Maior número: #{@maior_numero} com #{@maior_numero_itens} itens"
+    puts "#{Time.now.to_i - t1} - Maior número: #{maior_numero} com #{maior_numero_itens} itens"
+  end
+  
+  private
+  
+  def calc n, qtd_itens = 0
+    qtd_itens += 1
+    return qtd_itens if n == 1
+    return calc(n/2, qtd_itens) if n.even?
+    calc(3*n+1, qtd_itens)
   end
   
 end
