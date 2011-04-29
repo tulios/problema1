@@ -1,3 +1,5 @@
+= Problema
+
 A seguinte sequência iterativa é definida pelo conjunto de inteiros positivos onde:
 
 n -> n/2    (se n é par)
@@ -10,3 +12,13 @@ Usando as regras acima e começando pelo numero 13, nós gerariamos a seguinte s
 O que pode ser observado dessa sequência (começando no 13 e terminando no 1) é que ela contem 10 items. Embora ainda não esteja matematicamente provado, é esperando que, dado um numero inteiro positivo qualquer, a sequencia sempre chegará em 1.
 
 Qual inteiro positivo abaixo de 1 milhão, produz a sequencia com mais items?
+
+= Executando
+
+  bin/calculador_sequencia
+  
+= Considereções
+
+  O Ruby 1.9.2 é consideravelmente mais rápido que o 1.8.7, compare.
+  
+    time bin/calculador_sequencia

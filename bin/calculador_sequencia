@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+
+$LOAD_PATH.unshift "."
+require 'lib/calculador_sequencia'
+
+calculador = CalculadorSequencia.new ARGV[0].to_i
+puts "Maior número: #{calculador.maior_numero} com #{calculador.quantidade_itens} itens"
